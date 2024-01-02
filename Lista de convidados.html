@@ -1,17 +1,16 @@
-<!doctype html>
-<html>
-
-<head>
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Metadados -->
-    <meta charset="utf-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="styles.css" media="screen">
+    
 
     <!-- Título da página (aparece na aba) -->
     <title>Lista de convidados</title>
-</head>
+<link rel="stylesheet" type="text/css" href="./Lista de convidados_files/styles.css" media="screen"></head>
 
 <body>
 
@@ -31,27 +30,27 @@
             <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
             <div class="campo">
                 <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name="nome" id="nome" required>
+                <input type="text" name="nome" id="nome" required="">
             </div>
 
             <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
             <div class="campo">
                 <label for="sobrenome"><strong>Sobrenome</strong></label>
-                <input type="text" name="sobrenome" id="sobrenome" required>
+                <input type="text" name="sobrenome" id="sobrenome" required="">
             </div>
         </fieldset>
 
         <!-- Campo de email -->
         <div class="campo">
             <label for="email"><strong>Email</strong></label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" required="">
         </div>
 
         <!-- Campo de desenvolvimento web -->
         <div class="campo">
             <label><strong>Confirma sua presença?</strong></label>
             <label>
-                <input type="radio" name="devweb" value="Sim" checked>Sim
+                <input type="radio" name="devweb" value="Sim" checked="">Sim
             </label>
             <label>
                 <input type="radio" name="devweb" value="Não">Não
@@ -61,8 +60,8 @@
         <!-- Campo de senioridade -->
         <div class="campo">
             <label for="Idade"><strong>Idade</strong></label>
-            <select id="Idade" required>
-                <option selected disabled value="">Selecione</option>
+            <select id="Idade" required="">
+                <option selected="" disabled="" value="">Selecione</option>
                 <option>0 à 10</option>
                 <option>10+</option>
             </select>
@@ -96,7 +95,7 @@
 <div class="campo">
     <label for="presentePix"></label>
     <div class="pix-option">
-        <img src="pix.png" alt="Pix">
+        <img src="./Lista de convidados_files/pix.png" alt="Pix">
         <p2 id="texto"> Deseja fazer um pix?</p2>
     </div>
 </div>
@@ -108,6 +107,45 @@
     </form>
     
 
-</body>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 
-</html>
+
+
+</body></html>
